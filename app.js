@@ -50,4 +50,4 @@ for(let i = 0; i < 6; i++) {
 
 setInterval(() => {
     createSlide();
-}, 3000);
+}, 4000);

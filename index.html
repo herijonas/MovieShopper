@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 
     <head>
         <meta charset="UTF-8">
@@ -29,13 +30,13 @@
         </header>
 
         <div class="superior-roll">
-            <div class="superior-content"><img src="assets/tv3.svg" alt="">Movies</div>
-            <div class="superior-content"><img src="assets/tv2.svg" alt="">Series</div>
-            <div class="superior-content"><img src="assets/radio.svg" alt="">Radio</div>
-            <div class="superior-content"><img src="assets/hbo.svg" alt="">HBO Max</div>
-            <div class="superior-content"><img src="assets/netflix.svg" alt="">Netflix</div>
-            <div class="superior-content"><img src="assets/sports.svg" alt="">Sports</div>
-            <div class="superior-content"><img src="assets/adult.svg" alt="">Adult</div>
+            <button class="superior-content"><img src="assets/tv3.svg" alt="">Movies</button>
+            <button class="superior-content"><img src="assets/tv2.svg" alt="">Series</button>
+            <button class="superior-content"><img src="assets/radio.svg" alt="">Radio</button>
+            <button class="superior-content"><img src="assets/hbo.svg" alt="">HBO Max</button>
+            <button class="superior-content"><img src="assets/netflix.svg" alt="">Netflix</button>
+            <button class="superior-content"><img src="assets/sports.svg" alt="">Sports</button>
+            <button class="superior-content"><img src="assets/adult.svg" alt="">Adult</button>
         </div>
 
         <div class="carousel-container">
@@ -74,7 +75,12 @@
             </div>
             <div class="fast-watch">
                 <a href="index-watch.html"><button id="watchnow">Watch now</button></a>
-                <button class="watchlist">Add to watchlist <img src="assets/watchlist.png" alt=""></button>
+                <button onclick="displayCard()" class="watchlist" id="watchlist">Add to watchlist <img src="assets/watchlist.png" alt=""></button>
+            </div>
+        </div>
+
+        <div class="card-watchlist">
+            <div id="card-content" style="display: none;">
             </div>
         </div>
 
@@ -82,52 +88,66 @@
             <div class="container-title">
                 <h1>Plans & Pricing</h1>
             </div>
-            <div class="card">
-                <div class="title-card">
-                    <h2>STARTER</h2>
+            <div class="plans-container">
+                <div class="plans-card">
+                    <div class="top-title-card">
+                        <img src="assets/STARTER.svg" alt="">
+                        <p>STARTER</p>
+                    </div>
+                    <div class="top-desc-card">
+                        <p>Our starter plan is for everybody</p>
+                    </div>
+                    <div class="price-section-card">
+                        <p>U$ 9.9 <span>/month</span></p>
+                    </div>
+                    <div class="card-offers">
+                        <p>Hottest offers</p>
+                        <p>Two screens 1080p HD</p>
+                        <p>Unlimited movies</p>
+                    </div>
+                    <div class="card-btn">
+                        <button>Get started</button>
+                    </div>
                 </div>
-                <div class="price-card">
-                    <h1>$19</h1>
+                <div class="plans-card">
+                    <div class="top-title-card">
+                        <img src="assets/DIAMOND.svg" alt="">
+                        <p>PREMIUM</p>
+                    </div>
+                    <div class="top-desc-card">
+                        <p>Our starter plan is for everybody</p>
+                    </div>
+                    <div class="price-section-card">
+                        <p>U$ 28.9 <span>/month</span></p>
+                    </div>
+                    <div class="card-offers">
+                        <p>Latest premieres</p>
+                        <p>Four screens 4K ultra HD</p>
+                        <p>No ads</p>
+                    </div>
+                    <div class="card-btn">
+                        <button>Get started</button>
+                    </div>
                 </div>
-                <div class="desc-card">
-                    <p>- Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Velit porro et veniam excepturi.
-                    </p>
-                </div>
-                <div>
-                    <button class="button-card">I LIKE THIS</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="title-card">
-                    <h2>PLATINUM</h2>
-                </div>
-                <div class="price-card">
-                    <h1>$39</h1>
-                </div>
-                <div class="desc-card">
-                    <p>- Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Velit porro et veniam excepturi.
-                    </p>
-                </div>
-                <div>
-                    <button class="button-card">I LIKE THIS</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="title-card">
-                    <h2>DIAMOND</h2>
-                </div>
-                <div class="price-card">
-                    <h1>$79</h1>
-                </div>
-                <div class="desc-card">
-                    <p>- Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Velit porro et veniam excepturi.
-                    </p>
-                </div>
-                <div>
-                    <button class="button-card">I LIKE THIS</button>
+                <div class="plans-card">
+                    <div class="top-title-card">
+                        <img src="assets/PLATINUM.svg" alt="">
+                        <p>PLATINUM</p>
+                    </div>
+                    <div class="top-desc-card">
+                        <p>Our starter plan is for everybody</p>
+                    </div>
+                    <div class="price-section-card">
+                        <p>U$ 56.9 <span>/month</span></p>
+                    </div>
+                    <div class="card-offers">
+                        <p>Six screens 8K ultra HD</p>
+                        <p>Spacial audio</p>
+                        <p>Games access</p>
+                    </div>
+                    <div class="card-btn">
+                        <button>Get started</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -275,7 +295,7 @@
                 </h4>
                 <details>
                     <summary>View more</summary>
-                    <a href="#all-container">Subscribe now our <span>Diamond </span>plan!</a>
+                    <a href="#all-container">Subscribe now our <span>Premium </span>plan!</a>
                 </details>
             </div>
         </div>
@@ -317,7 +337,7 @@
 
         <script src="slider-data.js"></script>
         <script src="app.js"></script>
+        <script src="watchlist-btn.js"></script>
 
     </body>
-
-    
+</html>
